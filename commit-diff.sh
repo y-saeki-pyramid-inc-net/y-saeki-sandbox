@@ -17,4 +17,4 @@ do
   git cherry-pick -Xtheirs -x $rev || break 
 done 
 
-git merge $develop_branch
+git merge --no-ff --log -m "Merge branch '${develop_branch}' into ${diff_branch}" $develop_branch
