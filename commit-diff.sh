@@ -27,6 +27,7 @@ usage_exit() {
 while getopts "f:d:s:m" opt; 
 do
   case "$opt" in
+    f) FROM="${OPTARG}" ;;
     d) DEVELOP="${OPTARG}" ;;
     s) STAGE="${OPTARG}" ;;
     m) IS_MERGE="true" ;;
